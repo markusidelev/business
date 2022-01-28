@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -176,10 +177,10 @@ nav ul li a:hover {
   display: block;
   margin: 0 auto;
   width: 330px;
-  height: 70px;
   background: #f8cd53;
   text-decoration: none;
-  padding-top: 22px;
+  padding: 22px;
+  margin: 10px auto;
   color: #fff;
   font-size: 24px;
   line-height: 24px;
@@ -213,10 +214,10 @@ nav ul li a:hover {
 }
 
 .line {
-  height: 5px;
+  height: 3px;
   width: 45px;
   background: #424242;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
 .services {
@@ -493,6 +494,10 @@ nav ul li a:hover {
 .analysis img {
   margin: 0;
   padding: 20px 0;
+  transition: 0.5s;
+}
+.analysis img.active {
+  transform: rotate(180deg);
 }
 
 .form_button {
@@ -508,17 +513,20 @@ nav ul li a:hover {
 }
 
 .fbform {
+  width: 90%;
   margin: 30px auto 0;
   background: #ffffff;
   max-width: 685px;
   min-height: 460px;
   border-radius: 5px;
-  position: relative;
-  top: -500px;
+  top: -600px;
+  position: absolute;
+  transition: 0.5s;
 }
 
 .fbform.active {
   top: 0;
+  position: relative;
 }
 
 .fbform::before {
@@ -604,18 +612,13 @@ nav ul li a:hover {
   border: 2px solid #515151;
   border-radius: 10%;
   width: 48px;
-  height: 48px;
   margin: 30px 10px 35px;
   /*vertical-align: middle; */
-  padding-top: 10px;
+  padding: 15px 0;
   font-size: 23px;
   transition: 0.3s;
   text-decoration: none;
   color: #ffffff;
-}
-
-.fbform {
-  width: 90%;
 }
 
 .footer .socials i:hover {
@@ -687,7 +690,7 @@ nav ul li a:hover {
 }
 @media (max-width: 768px) {
   header {
-    /*justify-content:  justify; */
+    /*justify-content:    justify; */
     /*text-align: center; */
     flex-direction: column;
   }
