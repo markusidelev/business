@@ -17,8 +17,8 @@ topbar.hide()
 // 	$("html,body").animate({scrollTop:$(href).offset().top},1000);
 // });
 
-$(".animated").hover(function(){
-	$(".animated").toggleClass("rubberBand infinite");
+$("#author").hover(function(){
+	$("#author").toggleClass("rubberBand infinite");
 });
 
 
